@@ -7,7 +7,7 @@ html = urlopen("http://www.teu.ac.jp/campus/access/2017_kihon-a_bus.html")
 bsObj = BeautifulSoup(html, "html.parser")
 
 #テーブルを指定
-table = bsObj.findAll("table")[0]
+table = bsObj.findAll("table")[1]
 rows = table.findAll("tr")
 
 csvFile = open("timeTable.csv", 'wt', newline = '', encoding = 'utf-8')
