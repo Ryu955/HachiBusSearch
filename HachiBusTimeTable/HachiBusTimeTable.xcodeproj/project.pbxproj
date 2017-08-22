@@ -14,6 +14,7 @@
 		CB46C3E91F4C1379009544B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB46C3E71F4C1379009544B4 /* LaunchScreen.storyboard */; };
 		CB46C3F41F4C1379009544B4 /* HachiBusTimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3F31F4C1379009544B4 /* HachiBusTimeTableTests.swift */; };
 		CB46C3FF1F4C1379009544B4 /* HachiBusTimeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3FE1F4C1379009544B4 /* HachiBusTimeTableUITests.swift */; };
+		CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C40C1F4CA35A009544B4 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CB46C3FA1F4C1379009544B4 /* HachiBusTimeTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HachiBusTimeTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB46C3FE1F4C1379009544B4 /* HachiBusTimeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HachiBusTimeTableUITests.swift; sourceTree = "<group>"; };
 		CB46C4001F4C1379009544B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB46C40C1F4CA35A009544B4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CB46C3E51F4C1379009544B4 /* Assets.xcassets */,
 				CB46C3E71F4C1379009544B4 /* LaunchScreen.storyboard */,
 				CB46C3EA1F4C1379009544B4 /* Info.plist */,
+				CB46C40C1F4CA35A009544B4 /* WebViewController.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -187,6 +190,9 @@
 		CB46C3D31F4C1378009544B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					a,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Ryuta Ishikawa";
@@ -261,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */,
+				CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */,
 				CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
