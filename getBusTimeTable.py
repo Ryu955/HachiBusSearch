@@ -18,6 +18,10 @@ try:
         csvRow = []
         for cell in row.findAll(['td', 'th']):
             csvRow.append(cell.get_text())
-        writer.writerow(csvRow)
+            print(csvRow)
+        if csvRow == "['～', '～', '～', 'シャトル運行（約5～10分間隔）']":
+            writer.writerow("シャトル運行")
+        else:
+            writer.writerow(csvRow)
 finally:
     csvFile.close()
