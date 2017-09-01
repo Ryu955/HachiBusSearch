@@ -15,6 +15,7 @@
 		CB46C3F41F4C1379009544B4 /* HachiBusTimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3F31F4C1379009544B4 /* HachiBusTimeTableTests.swift */; };
 		CB46C3FF1F4C1379009544B4 /* HachiBusTimeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3FE1F4C1379009544B4 /* HachiBusTimeTableUITests.swift */; };
 		CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C40C1F4CA35A009544B4 /* WebViewController.swift */; };
+		CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CB46C3FE1F4C1379009544B4 /* HachiBusTimeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HachiBusTimeTableUITests.swift; sourceTree = "<group>"; };
 		CB46C4001F4C1379009544B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB46C40C1F4CA35A009544B4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingBusTimeTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				CB46C3E71F4C1379009544B4 /* LaunchScreen.storyboard */,
 				CB46C3EA1F4C1379009544B4 /* Info.plist */,
 				CB46C40C1F4CA35A009544B4 /* WebViewController.swift */,
+				CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */,
 				CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */,
+				CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */,
 				CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +519,7 @@
 				CB46C4051F4C1379009544B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB46C4061F4C1379009544B4 /* Build configuration list for PBXNativeTarget "HachiBusTimeTableTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				CB46C4081F4C1379009544B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB46C4091F4C1379009544B4 /* Build configuration list for PBXNativeTarget "HachiBusTimeTableUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				CB46C40B1F4C1379009544B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

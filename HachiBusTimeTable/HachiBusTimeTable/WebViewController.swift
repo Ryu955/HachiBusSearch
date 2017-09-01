@@ -12,14 +12,18 @@ class WebViewController: UIViewController {
     
     @IBOutlet weak var webview: UIWebView!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         // Do any additional setup after loading the view, typically from a nib.
         // urlとかをセットして　表示するだけ
         if let url = URL(string: "http://www.teu.ac.jp/campus/access/006644.html"){
             let request = URLRequest(url: url)
             webview.loadRequest(request)
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
