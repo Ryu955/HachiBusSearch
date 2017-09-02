@@ -38,13 +38,27 @@ class GoingBusTimeTableView: UIViewController , UITableViewDataSource, UITableVi
         let label2 = table.viewWithTag(2) as! UILabel
         label2.text = "\(label2Array[indexPath.row])"
         
+        
         return cell
     }
     
+    func csvToArray () {
+        if let csvPath = Bundle.main.path(forResource: "ファイル名を記入", ofType: "csv") {
+            do {
+                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let csvArr = csvStr.components(separatedBy: .newlines)
+                print(csvArr)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
 }

@@ -12,7 +12,17 @@ class WebViewController: UIViewController {
     
     @IBOutlet weak var webview: UIWebView!
 
+    @IBAction func prevBtn(_ sender: Any) {
+        // 戻る
+        self.webview.goBack()
+    }
 
+    @IBAction func nextBtn(_ sender: Any) {
+        // 進む
+        self.webview.goForward()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
