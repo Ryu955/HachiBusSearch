@@ -11,16 +11,20 @@ table = bsObj.findAll("table")[1]
 rows = table.findAll("tr")
 
 csvFile = open("BusTimeTable.csv", 'wt', newline = '', encoding = 'utf-8')
-writer = csv.writer(csvFile)
+writer = csv.writer(csvFile,lineterminator=',')
 
 try:
     for row in rows:
         csvRow = []
         for cell in row.findAll(['td', 'th']):
-            csvRow.append(cell.get_text())
-        if csvRow == "['～', '～', '～', 'シャトル運行（約5～10分間隔）']":
-            writer.writerow("シャトル運行")
-        else:
-            writer.writerow(csvRow)
+            text = cell.get_text()
+            if(text == '～'):
+                print('波線')
+            elif(text == ''):
+                print('空白')
+            else:
+                csvRow.append(text)
+                print(text)
+        writer.writerow(csvRow)
 finally:
     csvFile.close()
