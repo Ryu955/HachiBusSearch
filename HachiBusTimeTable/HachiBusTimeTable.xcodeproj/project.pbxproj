@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2DAD711F5C94760099DFC0 /* BusTimeTable2.csv in Resources */ = {isa = PBXBuildFile; fileRef = CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */; };
 		CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3DE1F4C1379009544B4 /* AppDelegate.swift */; };
 		CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3E01F4C1379009544B4 /* ViewController.swift */; };
 		CB46C3E41F4C1379009544B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB46C3E21F4C1379009544B4 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */; };
 		CBCFED0D1F5C656C000E6376 /* BusTimeTable.csv in Resources */ = {isa = PBXBuildFile; fileRef = CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */; };
 		CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */; };
+		CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusTimeTable2.csv; sourceTree = "<group>"; };
 		CB46C3DB1F4C1379009544B4 /* HachiBusTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachiBusTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB46C3DE1F4C1379009544B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB46C3E01F4C1379009544B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingBusTimeTableView.swift; sourceTree = "<group>"; };
 		CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusTimeTable.csv; sourceTree = "<group>"; };
 		CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableFormating.swift; sourceTree = "<group>"; };
+		CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnBusTimeTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		CB46C3D21F4C1378009544B4 = {
 			isa = PBXGroup;
 			children = (
+				CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */,
 				CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */,
 				CB46C3DD1F4C1379009544B4 /* HachiBusTimeTable */,
 				CB46C3F21F4C1379009544B4 /* HachiBusTimeTableTests */,
@@ -115,6 +120,7 @@
 				CB46C40C1F4CA35A009544B4 /* WebViewController.swift */,
 				CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */,
 				CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */,
+				CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 				CB46C3E61F4C1379009544B4 /* Assets.xcassets in Resources */,
 				CB46C3E41F4C1379009544B4 /* Main.storyboard in Resources */,
 				CBCFED0D1F5C656C000E6376 /* BusTimeTable.csv in Resources */,
+				CB2DAD711F5C94760099DFC0 /* BusTimeTable2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 				CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */,
 				CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */,
 				CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */,
+				CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */,
 				CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */,
 				CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */,
 			);
