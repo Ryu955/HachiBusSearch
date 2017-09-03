@@ -19,9 +19,11 @@ try:
         for cell in row.findAll(['td', 'th']):
             text = cell.get_text()
             if(text == '～'):
-                print('波線')
+                pass
             elif(text == ''):
-                print('空白')
+                pass
+            elif(text == '備　　考'):
+                pass
             else:
                 csvRow.append(text)
                 print(text)
