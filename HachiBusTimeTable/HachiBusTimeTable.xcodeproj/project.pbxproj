@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB2DAD711F5C94760099DFC0 /* BusTimeTable2.csv in Resources */ = {isa = PBXBuildFile; fileRef = CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */; };
+		CB2DAD741F5CBABC0099DFC0 /* bou.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DAD731F5CBABC0099DFC0 /* bou.png */; };
+		CB2DAD771F5E1A580099DFC0 /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2DAD761F5E1A580099DFC0 /* CoreActionSheetPicker.framework */; };
 		CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3DE1F4C1379009544B4 /* AppDelegate.swift */; };
 		CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB46C3E01F4C1379009544B4 /* ViewController.swift */; };
 		CB46C3E41F4C1379009544B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB46C3E21F4C1379009544B4 /* Main.storyboard */; };
@@ -40,7 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusTimeTable2.csv; sourceTree = "<group>"; };
+		CB2DAD731F5CBABC0099DFC0 /* bou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bou.png; sourceTree = "<group>"; };
+		CB2DAD761F5E1A580099DFC0 /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
 		CB46C3DB1F4C1379009544B4 /* HachiBusTimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HachiBusTimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB46C3DE1F4C1379009544B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB46C3E01F4C1379009544B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2DAD771F5E1A580099DFC0 /* CoreActionSheetPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,15 +89,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB2DAD721F5CBAAE0099DFC0 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				CB2DAD731F5CBABC0099DFC0 /* bou.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		CB2DAD751F5E1A570099DFC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB2DAD761F5E1A580099DFC0 /* CoreActionSheetPicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB46C3D21F4C1378009544B4 = {
 			isa = PBXGroup;
 			children = (
-				CB2DAD701F5C94760099DFC0 /* BusTimeTable2.csv */,
+				CB2DAD721F5CBAAE0099DFC0 /* img */,
 				CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */,
 				CB46C3DD1F4C1379009544B4 /* HachiBusTimeTable */,
 				CB46C3F21F4C1379009544B4 /* HachiBusTimeTableTests */,
 				CB46C3FD1F4C1379009544B4 /* HachiBusTimeTableUITests */,
 				CB46C3DC1F4C1379009544B4 /* Products */,
+				CB2DAD751F5E1A570099DFC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +173,7 @@
 				CB46C3D71F4C1379009544B4 /* Sources */,
 				CB46C3D81F4C1379009544B4 /* Frameworks */,
 				CB46C3D91F4C1379009544B4 /* Resources */,
+				CB2DAD781F5E1A6D0099DFC0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,11 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2DAD741F5CBABC0099DFC0 /* bou.png in Resources */,
 				CB46C3E91F4C1379009544B4 /* LaunchScreen.storyboard in Resources */,
 				CB46C3E61F4C1379009544B4 /* Assets.xcassets in Resources */,
 				CB46C3E41F4C1379009544B4 /* Main.storyboard in Resources */,
 				CBCFED0D1F5C656C000E6376 /* BusTimeTable.csv in Resources */,
-				CB2DAD711F5C94760099DFC0 /* BusTimeTable2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +298,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB2DAD781F5E1A6D0099DFC0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB46C3D71F4C1379009544B4 /* Sources */ = {
@@ -441,6 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6GCKPF2C83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HachiBusTimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.d-colors.HachiBusTimeTable";
@@ -454,6 +496,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6GCKPF2C83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HachiBusTimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.d-colors.HachiBusTimeTable";
