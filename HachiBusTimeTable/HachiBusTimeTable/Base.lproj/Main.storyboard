@@ -10,7 +10,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--検索結果-->
+        <scene sceneID="yBt-dh-Ru3">
+            <objects>
+                <viewController id="5k6-Y4-WhR" customClass="ResultViewController" customModule="HachiBusTimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AhJ-x6-waC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GAK-Jz-WhP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GAK-Jz-WhP" id="x9U-vy-4Ad">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="検索結果" id="nDc-E5-KQh">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="6xJ-Ii-kDE"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3E-u2-Q1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="1669"/>
+        </scene>
+        <!--帰りのバス検索-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HachiBusTimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,17 +56,18 @@
                                     <navigationItem title="帰りのバス検索" id="PkR-MQ-fNw"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkK-wS-IRJ">
-                                <rect key="frame" x="93" y="80" width="189" height="141"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-LP-Suw">
+                                <rect key="frame" x="172" y="318" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <segue destination="5k6-Y4-WhR" kind="show" id="Uyk-qQ-uo6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKT-ec-sf4">
-                                <rect key="frame" x="156" y="224" width="62" height="30"/>
+                                <rect key="frame" x="92" y="218" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="時間指定"/>
+                                <state key="normal" title="いま帰る"/>
                                 <connections>
                                     <action selector="selectTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCM-wu-fik"/>
                                 </connections>
@@ -47,14 +75,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xwx-8l-2Uu"/>
+                    <navigationItem key="navigationItem" title="帰りのバス検索" id="DfK-dv-GfR"/>
                     <connections>
-                        <outlet property="rideTime" destination="zkK-wS-IRJ" id="re8-xD-1zK"/>
+                        <outlet property="selectButton" destination="xKT-ec-sf4" id="2qu-b3-fEB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874.39999999999998" y="886.50674662668678"/>
+            <point key="canvasLocation" x="64.799999999999997" y="886.50674662668678"/>
         </scene>
         <!--goingBusTimeTableView-->
         <scene sceneID="i5X-BH-Chh">
@@ -120,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfY-cW-jl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="886.50674662668678"/>
+            <point key="canvasLocation" x="991.20000000000005" y="886.50674662668678"/>
         </scene>
         <!--Item-->
         <scene sceneID="pC3-Wf-Tie">
@@ -169,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTk-Oe-YJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="887"/>
+            <point key="canvasLocation" x="2980" y="886.50674662668678"/>
         </scene>
         <!--returnBusTimeTableView-->
         <scene sceneID="qEA-Td-fd6">
@@ -235,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psg-IN-9yJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.8" y="886.50674662668678"/>
+            <point key="canvasLocation" x="2092" y="886.50674662668678"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gtd-hI-fTu">
@@ -248,7 +276,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gwi-SF-CKn"/>
+                        <segue destination="NJI-Y6-EbE" kind="relationship" relationship="viewControllers" id="gwi-SF-CKn"/>
                         <segue destination="Fl2-DK-h8h" kind="relationship" relationship="viewControllers" id="EMY-jF-P1Y"/>
                         <segue destination="Tz2-yg-H1g" kind="relationship" relationship="viewControllers" id="L60-EO-U85"/>
                         <segue destination="FyY-od-ooo" kind="relationship" relationship="viewControllers" id="3xw-df-T91"/>
@@ -257,6 +285,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xS7-jC-0iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="X1w-Xp-Vxz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NJI-Y6-EbE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xwx-8l-2Uu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aRZ-5h-DKU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="naV-dO-mhh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghR-OF-bdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874.39999999999998" y="886.50674662668678"/>
         </scene>
     </scenes>
 </document>

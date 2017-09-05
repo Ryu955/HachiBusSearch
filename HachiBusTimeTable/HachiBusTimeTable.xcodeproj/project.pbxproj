@@ -21,6 +21,7 @@
 		CBCFED0D1F5C656C000E6376 /* BusTimeTable.csv in Resources */ = {isa = PBXBuildFile; fileRef = CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */; };
 		CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */; };
 		CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */; };
+		CBE37B871F5F535F00EA67D6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BusTimeTable.csv; sourceTree = "<group>"; };
 		CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableFormating.swift; sourceTree = "<group>"; };
 		CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnBusTimeTableView.swift; sourceTree = "<group>"; };
+		CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				CBCFED021F59CDF9000E6376 /* GoingBusTimeTableView.swift */,
 				CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */,
 				CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */,
+				CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */,
 				CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */,
+				CBE37B871F5F535F00EA67D6 /* ResultViewController.swift in Sources */,
 				CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */,
 				CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */,
 				CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */,
