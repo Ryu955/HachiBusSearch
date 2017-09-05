@@ -306,7 +306,7 @@
 			files = (
 			);
 			inputPaths = (
-				"(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework",
 			);
 			outputPaths = (
 			);
