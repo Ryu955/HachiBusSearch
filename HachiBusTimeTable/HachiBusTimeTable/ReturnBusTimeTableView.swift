@@ -1,5 +1,6 @@
 import UIKit
 
+
 class ReturnBusTimeTableView: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
   //  @IBOutlet var table:UITableView!
@@ -90,9 +91,6 @@ class ReturnBusTimeTableView: UIViewController , UITableViewDataSource, UITableV
                 count = 0
             }
         }
-        
-        print(arriveStation)
-        print(formCampus)
         
     }
     

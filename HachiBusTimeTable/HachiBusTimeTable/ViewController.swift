@@ -5,18 +5,22 @@ class ViewController: UIViewController, UIPickerViewDelegate  {
     
     @IBOutlet weak var selectButton: UIButton!
     
+    static var serchdata = 0
+    
     @IBAction func selectTime(_ sender: Any) {
         SelectTime()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-         let now = Date()
+        let dateFormater = DateFormatter()
+        dateFormater.locale = Locale(identifier: "ja_JP")
+        dateFormater.dateFormat = "HHmm"
+        let date = dateFormater.string(from: Date())
         
+        ViewController.serchdata = Int(date)!
         
-    
+        print("前serchdata = \(ViewController.serchdata)")
         
     }
 
@@ -27,10 +31,20 @@ class ViewController: UIViewController, UIPickerViewDelegate  {
             picker, value, index in
             
             let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "ja_JP")
             formatter.dateFormat = "HH:mm"
             
-            self.selectButton.titleLabel?.text = formatter.string(for: value)! + "に帰る"
+            self.selectButton.titleLabel?.text = formatter.string(for: value)
             
+            let time = value as! Date
+            
+            let dateFormater = DateFormatter()
+            dateFormater.locale = Locale(identifier: "ja_JP")
+            dateFormater.dateFormat = "HHmm"
+            let date = dateFormater.string(from: Date())
+            
+            ViewController.serchdata = Int(dateFormater.string(from: time))!
+            print("後serchdata = \(ViewController.serchdata)")
             print("value = \(value)")
             print("index = \(index)")
             print("picker = \(picker)")

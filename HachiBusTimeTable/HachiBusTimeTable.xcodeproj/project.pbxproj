@@ -22,6 +22,8 @@
 		CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */; };
 		CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */; };
 		CBE37B871F5F535F00EA67D6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */; };
+		CBE37B891F5F681700EA67D6 /* TrainTimeTable.csv in Resources */ = {isa = PBXBuildFile; fileRef = CBE37B881F5F681700EA67D6 /* TrainTimeTable.csv */; };
+		CBE37B8B1F5FADDE00EA67D6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableFormating.swift; sourceTree = "<group>"; };
 		CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnBusTimeTableView.swift; sourceTree = "<group>"; };
 		CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CBE37B881F5F681700EA67D6 /* TrainTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TrainTimeTable.csv; path = ../../../../Desktop/TrainTimeTable.csv; sourceTree = "<group>"; };
+		CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +114,9 @@
 		CB46C3D21F4C1378009544B4 = {
 			isa = PBXGroup;
 			children = (
-				CB2DAD721F5CBAAE0099DFC0 /* img */,
+				CBE37B881F5F681700EA67D6 /* TrainTimeTable.csv */,
 				CBCFED0C1F5C656C000E6376 /* BusTimeTable.csv */,
+				CB2DAD721F5CBAAE0099DFC0 /* img */,
 				CB46C3DD1F4C1379009544B4 /* HachiBusTimeTable */,
 				CB46C3F21F4C1379009544B4 /* HachiBusTimeTableTests */,
 				CB46C3FD1F4C1379009544B4 /* HachiBusTimeTableUITests */,
@@ -144,6 +149,7 @@
 				CBCFED0E1F5C7AFA000E6376 /* TimeTableFormating.swift */,
 				CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */,
 				CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */,
+				CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2DAD741F5CBABC0099DFC0 /* bou.png in Resources */,
+				CBE37B891F5F681700EA67D6 /* TrainTimeTable.csv in Resources */,
 				CB46C3E91F4C1379009544B4 /* LaunchScreen.storyboard in Resources */,
 				CB46C3E61F4C1379009544B4 /* Assets.xcassets in Resources */,
 				CB46C3E41F4C1379009544B4 /* Main.storyboard in Resources */,
@@ -326,6 +333,7 @@
 			files = (
 				CB46C3E11F4C1379009544B4 /* ViewController.swift in Sources */,
 				CB46C40D1F4CA35A009544B4 /* WebViewController.swift in Sources */,
+				CBE37B8B1F5FADDE00EA67D6 /* StringExt.swift in Sources */,
 				CBE37B871F5F535F00EA67D6 /* ResultViewController.swift in Sources */,
 				CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */,
 				CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */,
