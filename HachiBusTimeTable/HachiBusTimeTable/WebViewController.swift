@@ -11,25 +11,17 @@ import UIKit
 class WebViewController: UIViewController {
     
     @IBOutlet weak var webview: UIWebView!
-
-    @IBAction func prevBtn(_ sender: Any) {
-        // 戻る
-        self.webview.goBack()
-    }
-
-    @IBAction func nextBtn(_ sender: Any) {
-        // 進む
-        self.webview.goForward()
-    }
     
+    
+
+    
+    var selectedURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // Do any additional setup after loading the view, typically from a nib.
         // urlとかをセットして　表示するだけ
-        if let url = URL(string: "http://www.teu.ac.jp/campus/access/006644.html"){
+        if let url = selectedURL{
             let request = URLRequest(url: url)
             webview.loadRequest(request)
         }
@@ -41,6 +33,8 @@ class WebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+  
     
+
 }
 

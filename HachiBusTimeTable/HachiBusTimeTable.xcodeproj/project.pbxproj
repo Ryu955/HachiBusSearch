@@ -24,6 +24,8 @@
 		CBE37B871F5F535F00EA67D6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */; };
 		CBE37B891F5F681700EA67D6 /* TrainTimeTable.csv in Resources */ = {isa = PBXBuildFile; fileRef = CBE37B881F5F681700EA67D6 /* TrainTimeTable.csv */; };
 		CBE37B8B1F5FADDE00EA67D6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */; };
+		CBE37B8D1F604F4900EA67D6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE37B8C1F604F4900EA67D6 /* NoticeViewController.swift */; };
+		CBE37B901F605A1C00EA67D6 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE37B8F1F605A1C00EA67D6 /* Kanna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CBE37B881F5F681700EA67D6 /* TrainTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TrainTimeTable.csv; path = ../../../../Desktop/TrainTimeTable.csv; sourceTree = "<group>"; };
 		CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		CBE37B8C1F604F4900EA67D6 /* NoticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		CBE37B8F1F605A1C00EA67D6 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE37B901F605A1C00EA67D6 /* Kanna.framework in Frameworks */,
 				CB2DAD771F5E1A580099DFC0 /* CoreActionSheetPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +111,7 @@
 		CB2DAD751F5E1A570099DFC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBE37B8F1F605A1C00EA67D6 /* Kanna.framework */,
 				CB2DAD761F5E1A580099DFC0 /* CoreActionSheetPicker.framework */,
 			);
 			name = Frameworks;
@@ -150,6 +156,7 @@
 				CBCFED101F5C87A4000E6376 /* ReturnBusTimeTableView.swift */,
 				CBE37B861F5F535F00EA67D6 /* ResultViewController.swift */,
 				CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */,
+				CBE37B8C1F604F4900EA67D6 /* NoticeViewController.swift */,
 			);
 			path = HachiBusTimeTable;
 			sourceTree = "<group>";
@@ -174,6 +181,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		CBE37B8E1F60597900EA67D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		CB46C3DA1F4C1379009544B4 /* HachiBusTimeTable */ = {
 			isa = PBXNativeTarget;
@@ -183,6 +200,7 @@
 				CB46C3D81F4C1379009544B4 /* Frameworks */,
 				CB46C3D91F4C1379009544B4 /* Resources */,
 				CB2DAD781F5E1A6D0099DFC0 /* ShellScript */,
+				CBE37B8E1F60597900EA67D6 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -317,6 +335,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
 			);
 			outputPaths = (
 			);
@@ -338,6 +357,7 @@
 				CBCFED0F1F5C7AFA000E6376 /* TimeTableFormating.swift in Sources */,
 				CBCFED111F5C87A4000E6376 /* ReturnBusTimeTableView.swift in Sources */,
 				CBCFED031F59CDF9000E6376 /* GoingBusTimeTableView.swift in Sources */,
+				CBE37B8D1F604F4900EA67D6 /* NoticeViewController.swift in Sources */,
 				CB46C3DF1F4C1379009544B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -478,6 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
