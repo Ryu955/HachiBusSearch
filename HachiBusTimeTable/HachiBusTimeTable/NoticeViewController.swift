@@ -1,39 +1,59 @@
 import UIKit
 import Kanna
 
-/// Arrayの要素
-class element {
-    var day = ""
-    var hour = ""
-    var temperature: Double = 0
-}
-
-
 class NoticeViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var table:UITableView!
 
     var selectedURL: URL?
     
+    private var timeTableTitles:[String] = []
+    private var normalTimeTableTitles:[String] = []
+    
+    var baseURL = "http://www.teu.ac.jp"
+    
+    var isTitele = true
+    
+    var countTitle = 0
+
+    var specilURL:[URL] = []
+    var normalURL:[URL] = []
+    
+    // Sectionのタイトル
+    let sectionTitle: NSArray = ["臨時運行", "通常運行"]
+
+    
     @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }
-    
-    /// 最終データのArray
-    var finalData: [element] = []
-    /// 昨日のデータのArray
-    var yesterdayData: [element] = []
-    /// 今日のデータのArray
-    var todayData: [element] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scraping()
 
     }
+    // Section数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionTitle.count
+    }
+ 
+    // Sectioのタイトル
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitle[section] as? String
+    }
+    
+    
+    
     //Table Viewのセルの数を指定
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if section == 0 {
+            return specilURL.count
+        }
+        else if section == 1 {
+            return normalURL.count
+        }
+        else{
+            return 0
+        }
     }
     
     //各セルの要素を設定する
@@ -42,11 +62,17 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
         // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = table.dequeueReusableCell(withIdentifier: "noticeCell", for: indexPath)
         
-        // Tag番号 1 で UILabel インスタンスの生成
-        let label1 = table.viewWithTag(1) as! UILabel
-        label1.text = "1"
-        
+        if indexPath.section == 0 {        
+            // Tag番号 1 で UILabel インスタンスの生成
+            let label1 = table.viewWithTag(1) as! UILabel
+            label1.text = "\(timeTableTitles[indexPath.row])"
+        }else if indexPath.section == 1 {
 
+            // Tag番号 1 で UILabel インスタンスの生成
+            let label1 = table.viewWithTag(1) as! UILabel
+            label1.text = "\(normalTimeTableTitles[indexPath.row])"
+        }
+        
         return cell
     }
     
@@ -54,7 +80,12 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         // [indexPath.row] から画像名を探し、UImage を設定
         //selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
-        selectedURL = URL(string: "http://www.teu.ac.jp/campus/access/006644.html")
+        if indexPath.section == 0 {
+            selectedURL = specilURL[indexPath.row]
+        }else if indexPath.section == 1{
+            selectedURL = normalURL[indexPath.row]
+        }
+        
         if selectedURL != nil {
             // SubViewController へ遷移するために Segue を呼び出す
             performSegue(withIdentifier: "toWebViewController",sender: nil)
@@ -79,8 +110,37 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
         guard let doc = HTML(html: data, encoding: String.Encoding.utf8) else {
             fatalError("Error: HTML")
         }
-        for a in doc.xpath("//*[@data-role='listview']//li") {
-            print(a.toHTML!)
+        for node in doc.xpath("//*[@data-role='listview']//li") {
+            if(node.text! != "■スクールバス【臨時】時刻表" && countTitle == 1){
+                timeTableTitles.append(node.text!)
+            }else if(isTitele){
+                isTitele = false
+            }else if(countTitle == 2){
+                normalTimeTableTitles.append(node.text!)
+            }
+            
+            
+            print(node.text!)
+            let ans = node.toHTML!.pregReplace(pattern: "<li style=\"margin-bottom:5px;\"><a href=\"", with: "")
+            let ans2 = ans.pregReplace(pattern: "</a></li>", with: "")
+            let ans3 = ans2.pregReplace(pattern: "\">.+", with: "")
+            let ans4 = ans3.pregReplace(pattern: "<li><a href=\"", with: "")
+            
+            if(ans4 != "<li data-role=\"list-divider"){
+                print(ans4)
+                
+                if(countTitle == 1){
+//                    var url = baseURL + ans4
+                    specilURL.append(URL(string: baseURL + ans4)!)
+                }else{
+//                    var url = baseURL + ans4
+                    normalURL.append(URL(string: baseURL + ans4)!)
+                }
+                
+            }else{
+                countTitle += 1
+                print(countTitle)
+            }
         }
     }
     
