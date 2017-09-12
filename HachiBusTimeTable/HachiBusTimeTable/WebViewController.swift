@@ -41,14 +41,15 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
             //            let url = NSURL(string: "https://www.google.co.jp/")
             //            let urlRequest = URLRequest(url: url as! URL)
             self.webView.load(request)
-            
         }
     }
     
     override func viewDidLayoutSubviews() {
         //WKWebView リサイズ
         self.webView.frame = CGRect(origin: CGPoint.zero, size: self.contentView.frame.size)
+
     }
+
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         // ネットワークインジケータを表示
@@ -59,8 +60,7 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
         // ネットワークインジケータを非表示
         UIApplication.shared.isNetworkActivityIndicatorVisible = false;
     }
-    
-    
+
     @IBAction func onClickBackBarButton(_ sender: Any) {
         // 前のページ
         self.webView.goBack()
