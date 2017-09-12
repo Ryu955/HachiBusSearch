@@ -41,6 +41,7 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
             //            let url = NSURL(string: "https://www.google.co.jp/")
             //            let urlRequest = URLRequest(url: url as! URL)
             self.webView.load(request)
+            
         }
     }
     
@@ -59,6 +60,17 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
         UIApplication.shared.isNetworkActivityIndicatorVisible = false;
     }
     
+    
+    @IBAction func onClickBackBarButton(_ sender: Any) {
+        // 前のページ
+        self.webView.goBack()
+    }
 
+    
+    @IBAction func onClickForwardBarButton(_ sender: Any) {
+        // 次のページ
+        self.webView.goForward()
+    }
+    
 }
 
