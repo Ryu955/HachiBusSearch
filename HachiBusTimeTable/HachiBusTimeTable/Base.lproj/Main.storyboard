@@ -287,13 +287,13 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="back" id="HWl-Kk-PWy">
+                                    <barButtonItem title="item" id="HWl-Kk-PWy">
                                         <connections>
                                             <action selector="onClickBackBarButton:" destination="LXv-8m-poj" id="ilH-NC-66J"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="WTM-mJ-m1M"/>
-                                    <barButtonItem title="forward" id="8Oy-Kr-kpB">
+                                    <barButtonItem title="item" id="8Oy-Kr-kpB">
                                         <connections>
                                             <action selector="onClickForwardBarButton:" destination="LXv-8m-poj" id="zag-cq-QRc"/>
                                         </connections>
