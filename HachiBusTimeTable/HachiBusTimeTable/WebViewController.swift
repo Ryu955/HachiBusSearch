@@ -19,7 +19,7 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
     
     private var webView: WKWebView!
     var selectedURL: URL?
-    
+    var selectedTitle:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,5 +72,19 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
         self.webView.goForward()
     }
     
+    @IBAction func reloadPage(_ sender: Any) {
+        self.webView.reload()
+    }
+    
+    @IBAction func shareUrl(_ sender: Any) {
+        let text = "\(selectedTitle!) - \(selectedURL!)"
+        let items = [text]
+        
+        // UIActivityViewControllerをインスタンス化
+        let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        // UIAcitivityViewControllerを表示
+        self.present(activityVc, animated: true, completion: nil)
+    }
 }
 

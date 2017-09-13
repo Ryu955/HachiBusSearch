@@ -6,6 +6,7 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
     @IBOutlet var table:UITableView!
 
     var selectedURL: URL?
+    var selectedTitle: String?
     
     private var timeTableTitles:[String] = []
     private var normalTimeTableTitles:[String] = []
@@ -82,8 +83,10 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
         //selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
         if indexPath.section == 0 {
             selectedURL = specilURL[indexPath.row]
+            selectedTitle = timeTableTitles[indexPath.row]
         }else if indexPath.section == 1{
             selectedURL = normalURL[indexPath.row]
+            selectedTitle = normalTimeTableTitles[indexPath.row]
         }
         
         if selectedURL != nil {
@@ -98,6 +101,7 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
             let webVC: WebViewController = (segue.destination as? WebViewController)!
             // SubViewController のselectedImgに選択された画像を設定する
             webVC.selectedURL = selectedURL
+            webVC.selectedTitle = selectedTitle
         }
     }
 
