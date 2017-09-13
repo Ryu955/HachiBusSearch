@@ -287,24 +287,24 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="item" id="HWl-Kk-PWy">
+                                    <barButtonItem title="&lt;" id="HWl-Kk-PWy">
                                         <connections>
                                             <action selector="onClickBackBarButton:" destination="LXv-8m-poj" id="ilH-NC-66J"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="WTM-mJ-m1M"/>
-                                    <barButtonItem title="item" id="8Oy-Kr-kpB">
+                                    <barButtonItem title="&gt;" id="8Oy-Kr-kpB">
                                         <connections>
                                             <action selector="onClickForwardBarButton:" destination="LXv-8m-poj" id="zag-cq-QRc"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="5aP-gR-gjq"/>
+                                    <barButtonItem width="65" style="plain" systemItem="fixedSpace" id="5aP-gR-gjq"/>
                                     <barButtonItem systemItem="action" id="hDY-S2-u2v">
                                         <connections>
                                             <action selector="shareUrl:" destination="LXv-8m-poj" id="tcV-cc-40b"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="AiD-60-Afm"/>
+                                    <barButtonItem width="151" style="plain" systemItem="fixedSpace" id="AiD-60-Afm"/>
                                     <barButtonItem systemItem="refresh" id="Pe8-3v-Ung">
                                         <connections>
                                             <action selector="reloadPage:" destination="LXv-8m-poj" id="Tvm-jb-b7n"/>
@@ -315,9 +315,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="contentView" destination="hCv-aU-jOD" id="NnV-UW-JBv"/>
+                        <outlet property="goBackBtn" destination="HWl-Kk-PWy" id="6yz-g9-mgX"/>
                         <outlet property="view" destination="hCv-aU-jOD" id="AxG-uL-lg2"/>
                     </connections>
                 </viewController>

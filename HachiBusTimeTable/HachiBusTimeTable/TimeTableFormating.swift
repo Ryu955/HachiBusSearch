@@ -15,7 +15,6 @@ class TimeTableFormating{
                 let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
                 let csvArr = csvStr.components(separatedBy: ",")
                 timeTable = csvArr
-                
             } catch let error as NSError {
                 print(error.localizedDescription)
             }

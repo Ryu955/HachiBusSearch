@@ -17,6 +17,7 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
 
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var goBackBtn: UIBarButtonItem!
     private var webView: WKWebView!
     var selectedURL: URL?
     var selectedTitle:String?
@@ -43,7 +44,7 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
             self.webView.load(request)
         }
     }
-    
+
     override func viewDidLayoutSubviews() {
         //WKWebView リサイズ
         self.webView.frame = CGRect(origin: CGPoint.zero, size: self.contentView.frame.size)
@@ -59,6 +60,21 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // ネットワークインジケータを非表示
         UIApplication.shared.isNetworkActivityIndicatorVisible = false;
+
+        if (webView.canGoBack) {
+            goBackBtn.tintColor = nil
+        } else {
+            goBackBtn.tintColor = UIColor.gray
+        }
+    }
+
+    //ページが読み終わったときに呼ばれる関数
+    func webViewDidFinishLoad(webView: UIWebView) {
+        if webView.canGoBack {
+            goBackBtn.tintColor = nil
+        } else {
+            goBackBtn.tintColor = UIColor.gray
+        }
     }
 
     @IBAction func onClickBackBarButton(_ sender: Any) {
@@ -85,6 +101,11 @@ class WebViewController: UIViewController ,WKNavigationDelegate{
         
         // UIAcitivityViewControllerを表示
         self.present(activityVc, animated: true, completion: nil)
+    }
+
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
     }
 }
 

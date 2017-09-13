@@ -70,7 +70,7 @@
 		CBE37B8A1F5FADDE00EA67D6 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		CBE37B8C1F604F4900EA67D6 /* NoticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		CBE37B8F1F605A1C00EA67D6 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
-		CBFB7D9F1F6494B4006DAAE0 /* TrainTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrainTimeTable.csv; sourceTree = "<group>"; };
+		CBFB7D9F1F6494B4006DAAE0 /* TrainTimeTable.csv */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = TrainTimeTable.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
