@@ -59,7 +59,6 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
     
     //各セルの要素を設定する
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = table.dequeueReusableCell(withIdentifier: "noticeCell", for: indexPath)
         
@@ -79,6 +78,7 @@ class NoticeViewController: UIViewController , UITableViewDataSource, UITableVie
     
     // Cell が選択された場合
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+
         // [indexPath.row] から画像名を探し、UImage を設定
         //selectedImage = UIImage(named:"\(imgArray[indexPath.row])")
         if indexPath.section == 0 {

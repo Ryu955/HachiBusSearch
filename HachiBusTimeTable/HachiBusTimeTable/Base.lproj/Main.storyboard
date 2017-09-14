@@ -315,8 +315,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="contentView" destination="hCv-aU-jOD" id="NnV-UW-JBv"/>
+                        <outlet property="forwardBtn" destination="8Oy-Kr-kpB" id="Pj2-L5-vAp"/>
                         <outlet property="goBackBtn" destination="HWl-Kk-PWy" id="6yz-g9-mgX"/>
                         <outlet property="view" destination="hCv-aU-jOD" id="AxG-uL-lg2"/>
                     </connections>
